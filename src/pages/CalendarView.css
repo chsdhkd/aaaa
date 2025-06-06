@@ -1,0 +1,129 @@
+/* src/pages/CalendarView.css */
+.calendar-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.calendar-cell {
+  height: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.calendar-cell.today {
+  background-color: #007bff;
+  color: white;
+}
+
+.calendar-cell.empty {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+
+
+/* src/pages/CalendarView.css (또는 기존 CalendarView.css) */
+
+.calendar-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f5f5f5;
+}
+
+.calendar-weekday {
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-top: 10px;
+}
+.calendar-cell {
+  border: 1px solid #ddd;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  color: #000000;  /* 🔵 파란 글씨색 (모든 날짜 공통) */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* 오늘 날짜 */
+.calendar-cell.today {
+  background-color: #d0e8ff;  /* 연파랑 배경 */
+}
+
+/* 과제 있는 날 */
+.calendar-cell.has-task {
+  background-color: #ffe2e2;  /* 연빨강 배경 */
+}
+
+/* 오늘 + 과제 → 파란 배경 우선 */
+.calendar-cell.today.has-task {
+  background-color: #d0e8ff;
+}
+
+/* 클릭한 날짜 (선택됨) */
+.calendar-cell.selected {
+  outline: 2px solid #4a90e2;
+}

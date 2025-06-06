@@ -1,0 +1,42 @@
+/* 앱 전체 컨테이너 */
+.App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;  /* ✅ 최소 화면 높이 보장 */
+  height: auto;        /* ✅ 콘텐츠가 길면 자동으로 늘어남 */
+  font-family: sans-serif;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 200px;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;  /* ✅ App이 커지면 함께 따라감 */
+}
+
+/* 사이드바 내부 메뉴 */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}

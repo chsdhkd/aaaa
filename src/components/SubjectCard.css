@@ -1,0 +1,21 @@
+.subject-card {
+  width: 150px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subject-card:hover {
+  transform: scale(1.05);
+}
+
+.subject-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
